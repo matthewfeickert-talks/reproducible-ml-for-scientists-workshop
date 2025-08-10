@@ -2,7 +2,7 @@ name: MyST GitHub Pages Deploy
 
 on:
   push:
-    # branches: [main]
+    branches: [main]
   pull_request:
   workflow_dispatch:
 
@@ -54,8 +54,7 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     needs: build
-    # if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
-    if: github.event_name != 'pull_request'
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
 
     steps:
 
