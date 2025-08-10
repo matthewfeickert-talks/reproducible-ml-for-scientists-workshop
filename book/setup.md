@@ -9,7 +9,7 @@ While an NVIDIA GPU is not required to be able to work through the workshop, acc
 
 :::{important} URSSI 2025 in-person workshop resources
 
-For the [in-person URSSI 2025 workshop](https://cfp.scipy.org/scipy2025/talk/GDN8PN/) (on 2025-08-14) NVIDIA has donated GPU resources through an [NVIDIA Brev platform](https://developer.nvidia.com/brev).
+For the [in-person URSSI 2025 workshop](https://indico.global/event/14982/) (on 2025-08-14) NVIDIA has donated GPU resources through an [NVIDIA Brev platform](https://developer.nvidia.com/brev).
 Workshop participants will be given a code to use at the start of the workshop by the instructors.
 You must be in-person at the workshop to receive the code.
 
@@ -144,16 +144,16 @@ This will allow you to easily share your work with others and keep track of your
 
 1. Create a personal [GitHub account](https://github.com/) _if you don’t have one yet_.
 1. Add a new repository to your account through this link: [Create a new repository](https://github.com/new).
-1. Name the new repository `reproducible-ml-scipy-2025`, make it public, and give it a README and an [open source license](https://docs.github.com/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository) (e.g. MIT License).
+1. Name the new repository `reproducible-ml-2025`, make it public, and give it a README and an [open source license](https://docs.github.com/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository) (e.g. MIT License).
 
 To streamline this we recommend using the [GitHub CLI](https://cli.github.com/) to create the repository.
 
 Feel free to change any of the options below to suit your needs, but the following command will create a new public repository with a README, a Python [`.gitignore`](https://docs.github.com/en/get-started/git-basics/ignoring-files), and an MIT [license](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository):
 
 ```bash
-gh repo create reproducible-ml-scipy-2025 \
+gh repo create reproducible-ml-2025 \
    --public \
-   --description "Reproducible Machine Learning Workflows for Scientists with Pixi at SciPy 2025" \
+   --description "Reproducible Machine Learning Workflows for Scientists workshop 2025" \
    --add-readme \
    --gitignore Python \
    --license MIT \
@@ -164,20 +164,21 @@ Because of the `--clone` option, this will also clone the newly created reposito
 Now you can navigate to the newly created repository directory:
 
 ```bash
-cd reproducible-ml-scipy-2025
+cd reproducible-ml-2025
 ```
 
 Now you have a GitHub repository set up to store your work from this workshop.
 
 ## Prepare Brev Instance
-#### Create an NVIDIA Brev account
+
+### Create an NVIDIA Brev account
 
 To access the NVIDIA Brev instance you'll also need to create an NVIDIA Brev account.
 
 * Visit https://login.brev.nvidia.com/signin and fill in your email address and agree to the terms of use.
 * Check your email address that you used to create the account for verification email with further instructions.
 
-#### Login to Brev account with Brev CLI
+### Login to Brev account with Brev CLI
 
 To validate your Brev account and your Brev CLI install, login to your Brev account from the command line with [`brev login`](https://docs.nvidia.com/brev/latest/brev-cli.html#login).
 
@@ -193,7 +194,7 @@ brev login
 
 :::
 
-#### Prepare an NVIDIA Brev instance
+### Prepare an NVIDIA Brev instance
 
 ::: {warning} Resource use requires billing information
 
@@ -202,7 +203,7 @@ If you are running this at the in-person URSSI 2025 workshop, **wait** to do the
 
 :::
 
-Later on in the [URSSI 2025 workshop](https://cfp.scipy.org/scipy2025/talk/GDN8PN/), we'll use a coupon code to provision a new Brev GPU instance environment.
+Later on in the [URSSI 2025 workshop](https://indico.global/event/14982/), we'll use a coupon code to provision a new Brev GPU instance environment.
 
 The particular configuration we'll be using is:
 * 1x NVIDIA L4 GPU
@@ -220,7 +221,8 @@ You can select it from the [Brev new environment page](https://brev.nvidia.com/e
 brev create pixi-cuda --gpu g2-standard-4:nvidia-l4:1
 ```
 
-#### Access the NVIDIA Brev instance on your machine
+### Access the NVIDIA Brev instance on your machine
+
 Once the instance is created, get access to it with the following command:
 ```bash
 # Open the instance in vscode:
@@ -231,7 +233,7 @@ brev open pixi-cuda
 brev shell pixi-cuda
 ```
 
-#### Prepare your Brev instance
+### Prepare your Brev instance
 
 Once you have access to the Brev instance, you can use it like any other Linux machine
 and install any additional software you need.
