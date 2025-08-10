@@ -224,13 +224,17 @@ brev create pixi-cuda --gpu g2-standard-4:nvidia-l4:1
 ### Access the NVIDIA Brev instance on your machine
 
 Once the instance is created, get access to it with the following command:
+
 ```bash
-# Open the instance in vscode:
-brev open pixi-cuda
-```
-```bash
-# Or start an ssh session into the instance
+# Start an ssh session connected to the instance
 brev shell pixi-cuda
+```
+
+or
+
+```bash
+# Open the instance in VS Code
+brev open pixi-cuda
 ```
 
 ### Prepare your Brev instance
