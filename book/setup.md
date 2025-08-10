@@ -24,7 +24,6 @@ This workshop requires minimal software to be installed in advance:
 * [Pixi](https://pixi.sh/)
 * [Git](https://git-scm.com/), if not already familar with `git` and GitHub, please install [`gh`](https://cli.github.com/) as well to simplify the workflow.
 * [Brev CLI](https://docs.nvidia.com/brev/latest/brev-cli.html)
-* Highly recommend a IDE like [Visual Studio Code](https://code.visualstudio.com/) or [PyCharm](https://www.jetbrains.com/pycharm/).
 
 ### Web Platforms (optional, but encouraged)
 
@@ -89,7 +88,9 @@ pixi global install git
 
 You can now use the Git anywhere on your machine.
 
+<!--
 ### GitHub CLI (`gh`)
+
 If you are not already familiar with `git` and GitHub, we recommend installing the [GitHub CLI](https://cli.github.com/) to simplify the workflow.
 To install the GitHub CLI, first make sure you have [Pixi installed](#install-pixi), as described above, and then run
 
@@ -103,6 +104,7 @@ Then log in to your GitHub account with
 gh auth login
 ```
 You can now use the GitHub CLI anywhere on your machine.
+ -->
 
 ### Brev
 
@@ -144,14 +146,16 @@ This will allow you to easily share your work with others and keep track of your
 
 1. Create a personal [GitHub account](https://github.com/) _if you don’t have one yet_.
 1. Add a new repository to your account through this link: [Create a new repository](https://github.com/new).
-1. Name the new repository `reproducible-ml-2025`, make it public, and give it a README and an [open source license](https://docs.github.com/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository) (e.g. MIT License).
+1. Name the new repository `reproducible-ml-lesson`, make it public, and give it a README and an [open source license](https://docs.github.com/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository) (e.g. MIT License).
+1. As GitHub requires two-factor authentication, it is highly recommended that you [generate an SSH key pair](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) specifically for GitHub, [add the generated SSH key to your GitHub account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account), and then use your SSH keys to connect with GitHub.
 
+<!--
 To streamline this we recommend using the [GitHub CLI](https://cli.github.com/) to create the repository.
 
 Feel free to change any of the options below to suit your needs, but the following command will create a new public repository with a README, a Python [`.gitignore`](https://docs.github.com/en/get-started/git-basics/ignoring-files), and an MIT [license](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository):
 
 ```bash
-gh repo create reproducible-ml-2025 \
+gh repo create reproducible-ml-lesson \
    --public \
    --description "Reproducible Machine Learning Workflows for Scientists workshop 2025" \
    --add-readme \
@@ -161,10 +165,14 @@ gh repo create reproducible-ml-2025 \
 ```
 
 Because of the `--clone` option, this will also clone the newly created repository to your local machine.
-Now you can navigate to the newly created repository directory:
+-->
+
+Now you can navigate to the newly created repository `https://github.com/<username>/reproducible-ml-lesson` and then clone to your local machine
 
 ```bash
-cd reproducible-ml-2025
+# This assumes you have SSH keys setup with your GitHub account as recommended
+git clone git@github.com:<username>/reproducible-ml-lesson.git
+cd reproducible-ml-lesson
 ```
 
 Now you have a GitHub repository set up to store your work from this workshop.
@@ -203,7 +211,7 @@ If you are running this at the in-person URSSI 2025 workshop, **wait** to do the
 
 :::
 
-Later on in the [URSSI 2025 workshop](https://indico.global/event/14982/), we'll use a coupon code to provision a new Brev GPU instance environment.
+Later on in the [URSSI 2025 workshop](https://indico.global/event/14982/), we'll use a coupon code provided by NVIDIA to provision a new Brev GPU instance environment.
 
 The particular configuration we'll be using is:
 * 1x NVIDIA L4 GPU
@@ -218,7 +226,7 @@ You can select it from the [Brev new environment page](https://brev.nvidia.com/e
 **OR** run the following command to create a new instance with the same configuration:
 
 ```bash
-brev create pixi-cuda --gpu g2-standard-4:nvidia-l4:1
+brev create reproducible-ml-workshop --gpu g2-standard-4:nvidia-l4:1
 ```
 
 ### Access the NVIDIA Brev instance on your machine
@@ -227,14 +235,14 @@ Once the instance is created, get access to it with the following command:
 
 ```bash
 # Start an ssh session connected to the instance
-brev shell pixi-cuda
+brev shell reproducible-ml-workshop
 ```
 
 or
 
 ```bash
 # Open the instance in VS Code
-brev open pixi-cuda
+brev open reproducible-ml-workshop
 ```
 
 ### Prepare your Brev instance
