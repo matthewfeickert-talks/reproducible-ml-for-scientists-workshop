@@ -1,0 +1,33 @@
+[workspace]
+channels = ["conda-forge"]
+name = "reproducible-ml-for-scientists-workshop"
+platforms = ["linux-64", "osx-arm64"]
+version = "0.1.0"
+
+[tasks.build]
+description = "Build tutorial as static HTML website"
+cmd = "myst build --html"
+cwd = "book"
+
+[tasks.clean]
+description = "Remove exports, temp files and installed templates"
+cmd = "myst clean --yes"
+cwd = "book"
+
+[tasks.start]
+cmd = "myst start"
+cwd = "book"
+description = "Start a local server to preview the tutorial"
+
+[tasks.lint]
+description = "Run pre-commit on all files in the repository"
+cmd = "pre-commit run --all-files"
+
+[tasks.check-links]
+cmd = "lychee --no-progress book/*.md"
+description = "Check links in the tutorial, might fail if no GITHUB_TOKEN is set"
+
+[dependencies]
+mystmd = ">=1.6.0,<2"
+pre-commit = ">=4.2.0,<5"
+lychee = ">=0.19.1,<0.20"
