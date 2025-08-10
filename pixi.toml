@@ -29,5 +29,5 @@ description = "Check links in the tutorial, might fail if no GITHUB_TOKEN is set
 
 [dependencies]
 mystmd = ">=1.6.0,<2"
-pre-commit = ">=4.2.0,<5"
+pre-commit = ">=4.3.0,<5"
 lychee = ">=0.19.1,<0.20"
