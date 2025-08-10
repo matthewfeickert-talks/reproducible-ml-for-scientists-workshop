@@ -1,7 +1,7 @@
 # See docs at: https://mystmd.org/guide/frontmatter
 version: 1
 project:
-  id: 4f62f83b-dbc0-4784-9550-b67b1a244538
+  id: 7cb472ed-7ce6-48e6-a310-e264fe9c0b54
   title: Reproducible Machine Learning Workflows for Scientists
   description: |
     Scientific researchers need reproducible software environments for complex applications that can run across heterogeneous computing platforms.
@@ -18,7 +18,7 @@ project:
           department: Data Science Institute
       orcid: "0000-0003-4124-7862"
       github: matthewfeickert
-  github: https://github.com/matthewfeickert-talks/reproducible-ml-for-scientists-with-pixi-scipy-2025
+  github: https://github.com/matthewfeickert-talks/reproducible-ml-for-scientists-workshop
   abbreviations:
     CLI : "Command Line Interface"
     TOML: "Tom's Obvious, Minimal Language"
