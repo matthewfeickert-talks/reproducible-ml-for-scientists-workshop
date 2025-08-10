@@ -4,20 +4,20 @@
 
 * An NVIDIA GPU
 
-This tutorial focuses on hardware acceleration for {term}`CUDA` environments which require an NVIDIA GPU to use.
-While an NVIDIA GPU is not required to be able to work through the tutorial, access to one will be required to run the examples.
+This workshop focuses on hardware acceleration for {term}`CUDA` environments which require an NVIDIA GPU to use.
+While an NVIDIA GPU is not required to be able to work through the workshop, access to one will be required to run the examples.
 
-:::{important} SciPy 2025 in-person tutorial resources
+:::{important} URSSI 2025 in-person workshop resources
 
-For the [in-person tutorial at SciPy 2025](https://cfp.scipy.org/scipy2025/talk/GDN8PN/) (on 2025-07-07) NVIDIA has donated GPU resources through an [NVIDIA Brev platform](https://developer.nvidia.com/brev).
-Tutorial participants will be given a code to use at the start of the tutorial by the instructors.
-You must be in-person at the tutorial to receive the code.
+For the [in-person URSSI 2025 workshop](https://cfp.scipy.org/scipy2025/talk/GDN8PN/) (on 2025-08-14) NVIDIA has donated GPU resources through an [NVIDIA Brev platform](https://developer.nvidia.com/brev).
+Workshop participants will be given a code to use at the start of the workshop by the instructors.
+You must be in-person at the workshop to receive the code.
 
 :::
 
 ## Software
 
-This tutorial requires minimal software to be installed in advance:
+This workshop requires minimal software to be installed in advance:
 
 * A computer running an 64 bit version of Linux, macOS, or Windows.
    - At the moment a laptop is required and an ARM based tablet will not be sufficient.
@@ -30,7 +30,7 @@ This tutorial requires minimal software to be installed in advance:
 
 * [GitHub](https://github.com/)
 
-For this tutorial we would like you to create your own Git repository where you add the results of your work as you move through the tutorial so that you have a sharable form of what you have learned by the end.
+For this workshop we would like you to create your own Git repository where you add the results of your work as you move through the workshop so that you have a sharable form of what you have learned by the end.
 It doesn't _need_ to be GitHub (GitLab.com or some other alternative exist) but for the sake of consistency, the instructions will assume you are using GitHub.
 
 ::: {attention} GitHub mandatory two-factor authentication
@@ -123,7 +123,7 @@ To participate in the GPU component of the workshop with Brev on a Windows machi
 
 :::
 
-For the portion of the tutorial where GPUs will be used we'll be working on an [NVIDIA Brev instance](https://developer.nvidia.com/brev).
+For the portion of the workshop where GPUs will be used we'll be working on an [NVIDIA Brev instance](https://developer.nvidia.com/brev).
 To install the CLI API for Brev, we'll use [`pixi global`](https://pixi.sh/latest/global_tools/introduction/) so make sure you first have [Pixi installed](#install-pixi), as described above, and then run
 
 ```bash
@@ -139,7 +139,7 @@ brev --help
 
 ## Setup a Personal GitHub Repository
 
-To share your work from this tutorial, we will create a GitHub repository to store your code and results.
+To share your work from this workshop, we will create a GitHub repository to store your code and results.
 This will allow you to easily share your work with others and keep track of your progress, or share it with the Brev instance.
 
 1. Create a personal [GitHub account](https://github.com/) _if you don’t have one yet_.
@@ -167,7 +167,7 @@ Now you can navigate to the newly created repository directory:
 cd reproducible-ml-scipy-2025
 ```
 
-Now you have a GitHub repository set up to store your work from this tutorial.
+Now you have a GitHub repository set up to store your work from this workshop.
 
 ## Prepare Brev Instance
 #### Create an NVIDIA Brev account
@@ -198,11 +198,11 @@ brev login
 ::: {warning} Resource use requires billing information
 
 Provisioning Brev instances requires billing information be added to your account.
-If you are running this at the in-person SciPy 2025 tutorial, **wait** to do these steps until after you are given the code at the start of the tutorial.
+If you are running this at the in-person URSSI 2025 workshop, **wait** to do these steps until after you are given the code at the start of the workshop.
 
 :::
 
-Later on in the [SciPy 2025 tutorial](https://cfp.scipy.org/scipy2025/talk/GDN8PN/), we'll use a coupon code to provision a new Brev GPU instance environment.
+Later on in the [URSSI 2025 workshop](https://cfp.scipy.org/scipy2025/talk/GDN8PN/), we'll use a coupon code to provision a new Brev GPU instance environment.
 
 The particular configuration we'll be using is:
 * 1x NVIDIA L4 GPU
